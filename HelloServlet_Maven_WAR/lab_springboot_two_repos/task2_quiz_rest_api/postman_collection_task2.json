@@ -1,0 +1,86 @@
+{
+  "info": {
+    "name": "Task 2 - Quiz REST API",
+    "_postman_id": "task2-quiz-rest-api",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Start Quiz (allowed check)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"studentId\": \"2026001\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8082/api/quiz/start",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "quiz",
+            "start"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Questions",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8082/api/quiz/questions",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "quiz",
+            "questions"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Submit Answers",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"studentId\": \"2026001\",\n  \"answers\": [1, 2]\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8082/api/quiz/submit",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "quiz",
+            "submit"
+          ]
+        }
+      }
+    }
+  ]
+}

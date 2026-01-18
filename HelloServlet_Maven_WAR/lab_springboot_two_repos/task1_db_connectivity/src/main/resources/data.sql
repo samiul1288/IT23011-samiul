@@ -1,0 +1,4 @@
+INSERT IGNORE INTO student(student_id) VALUES
+('2026001'),
+('2026002'),
+('2026003');

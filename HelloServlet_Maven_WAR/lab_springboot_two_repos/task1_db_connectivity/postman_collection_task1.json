@@ -1,0 +1,75 @@
+{
+  "info": {
+    "name": "Task 1 - DB Connectivity",
+    "_postman_id": "task1-db-connectivity",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Ping DB",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8081/api/pingdb",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "pingdb"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Check Student Exists",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8081/api/students/2026001/exists",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "students",
+            "2026001",
+            "exists"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Insert Student",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"studentId\":\"2026999\"}"
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/students",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "students"
+          ]
+        }
+      }
+    }
+  ]
+}
